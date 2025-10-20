@@ -13,13 +13,18 @@ import { pieChartData } from "../data/sampleData";
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = (props: PieLabelRenderProps) => {
 	const { cx, cy, midAngle, innerRadius, outerRadius, percent } = props;
-	
-	if (typeof cx !== 'number' || typeof cy !== 'number' || 
-	    typeof midAngle !== 'number' || typeof innerRadius !== 'number' || 
-	    typeof outerRadius !== 'number' || typeof percent !== 'number') {
+
+	if (
+		typeof cx !== "number" ||
+		typeof cy !== "number" ||
+		typeof midAngle !== "number" ||
+		typeof innerRadius !== "number" ||
+		typeof outerRadius !== "number" ||
+		typeof percent !== "number"
+	) {
 		return null;
 	}
-	
+
 	const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
 	const x = cx + radius * Math.cos(-midAngle * RADIAN);
 	const y = cy + radius * Math.sin(-midAngle * RADIAN);
