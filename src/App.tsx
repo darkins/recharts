@@ -11,9 +11,7 @@ function App() {
 		<div className="App">
 			<header className="App-header">
 				<h1>COVID-19 Impact on Ireland's Food Industry</h1>
-				<p>
-					Data visualization from CSO.ie, ESRI.ie, and Irish Times reporting
-				</p>
+				<p>Data visualization from CSO.ie, ESRI.ie, and the Irish Times</p>
 			</header>
 
 			<main className="dashboard">
