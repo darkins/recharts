@@ -32,7 +32,7 @@ const AreaChartComponent: React.FC = () => {
 					<XAxis dataKey="month" />
 					<YAxis />
 					<Tooltip />
-					<Legend />
+					<Legend wrapperStyle={{ paddingTop: "1em" }} />
 					<Bar dataKey="food_insecure" fill="#DC2626" name="Food Insecure" />
 					<Bar
 						dataKey="pandemic_payment"

@@ -32,7 +32,7 @@ const BarChartComponent: React.FC = () => {
 					<XAxis dataKey="category" />
 					<YAxis />
 					<Tooltip />
-					<Legend />
+					<Legend wrapperStyle={{ paddingTop: "1em" }} />
 					<Bar dataKey="pre_covid" fill="#0891B2" name="Pre-COVID Sales" />
 					<Bar dataKey="covid_peak" fill="#DC2626" name="COVID Peak Sales" />
 				</BarChart>

@@ -32,7 +32,7 @@ const RadarChartComponent: React.FC = () => {
 					<XAxis dataKey="metric" />
 					<YAxis />
 					<Tooltip />
-					<Legend />
+					<Legend wrapperStyle={{ paddingTop: "1em" }} />
 					<Bar name="Pre-COVID" dataKey="pre_covid" fill="#059669" />
 					<Bar name="COVID Impact" dataKey="covid_impact" fill="#DC2626" />
 					<Bar name="Recovery" dataKey="recovery" fill="#2563EB" />

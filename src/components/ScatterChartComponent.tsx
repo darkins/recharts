@@ -30,7 +30,7 @@ const ScatterChartComponent: React.FC = () => {
 					<XAxis dataKey="category" />
 					<YAxis />
 					<Tooltip />
-					<Legend />
+					<Legend wrapperStyle={{ paddingTop: "1em" }} />
 					<Bar
 						name="Price Increase (%)"
 						dataKey="price_increase"

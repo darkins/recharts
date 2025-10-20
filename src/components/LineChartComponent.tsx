@@ -32,7 +32,7 @@ const LineChartComponent: React.FC = () => {
 					<XAxis dataKey="month" />
 					<YAxis />
 					<Tooltip />
-					<Legend />
+					<Legend wrapperStyle={{ paddingTop: "1em" }} />
 					<Line
 						type="monotone"
 						dataKey="restaurant_sales"
