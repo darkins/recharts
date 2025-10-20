@@ -1,31 +1,29 @@
 .App {
 	text-align: center;
 	min-height: 100vh;
-	background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
-	color: white;
+	background: #f7f7f7;
+	color: #333333;
 	overflow-x: hidden;
 }
 
 .App-header {
 	padding: 2rem 1rem;
-	background: rgba(0, 0, 0, 0.15);
+	background: rgba(255, 255, 255, 0.4);
 	backdrop-filter: blur(10px);
 }
 
 .App-header h1 {
 	font-size: clamp(1.5rem, 5vw, 3rem);
 	margin-bottom: 0.5rem;
-	background: linear-gradient(45deg, #fbbf24, #f59e0b);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
+	color: #003366;
 	padding: 0 1rem;
 	line-height: 1.2;
+	font-weight: 700;
 }
 
 .App-header p {
 	font-size: clamp(0.9rem, 3vw, 1.2rem);
-	opacity: 0.9;
+	opacity: 0.85;
 	margin: 0;
 	padding: 0 1rem;
 }
@@ -81,8 +79,7 @@
 
 .App-footer {
 	padding: 2rem 1rem;
-	background: rgba(0, 0, 0, 0.2);
-	backdrop-filter: blur(10px);
+	background: transparent;
 	margin-top: 2rem;
 }
 
