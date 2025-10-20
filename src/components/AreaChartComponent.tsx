@@ -1,11 +1,12 @@
 import React from "react";
 import {
-	AreaChart,
-	Area,
+	BarChart,
+	Bar,
 	XAxis,
 	YAxis,
 	CartesianGrid,
 	Tooltip,
+	Legend,
 	ResponsiveContainer,
 } from "recharts";
 import { areaChartData } from "../data/sampleData";
@@ -18,7 +19,7 @@ const AreaChartComponent: React.FC = () => {
 				Pandemic Unemployment Payment impact (persons)
 			</p>
 			<ResponsiveContainer width="100%" height={300}>
-				<AreaChart
+				<BarChart
 					data={areaChartData}
 					margin={{
 						top: 10,
@@ -31,34 +32,15 @@ const AreaChartComponent: React.FC = () => {
 					<XAxis dataKey="month" />
 					<YAxis />
 					<Tooltip />
-					<Area
-						type="monotone"
-						dataKey="food_insecure"
-						stackId="1"
-						stroke="#DC2626"
-						fill="#DC2626"
-						fillOpacity={0.7}
-						name="Food Insecure"
-					/>
-					<Area
-						type="monotone"
+					<Legend />
+					<Bar dataKey="food_insecure" fill="#DC2626" name="Food Insecure" />
+					<Bar
 						dataKey="pandemic_payment"
-						stackId="1"
-						stroke="#059669"
 						fill="#059669"
-						fillOpacity={0.7}
 						name="PUP Recipients"
 					/>
-					<Area
-						type="monotone"
-						dataKey="food_banks"
-						stackId="1"
-						stroke="#D97706"
-						fill="#D97706"
-						fillOpacity={0.7}
-						name="Food Bank Users"
-					/>
-				</AreaChart>
+					<Bar dataKey="food_banks" fill="#D97706" name="Food Bank Users" />
+				</BarChart>
 			</ResponsiveContainer>
 		</div>
 	);

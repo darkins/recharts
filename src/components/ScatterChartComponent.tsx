@@ -1,11 +1,12 @@
 import React from "react";
 import {
-	ScatterChart,
-	Scatter,
+	BarChart,
+	Bar,
 	XAxis,
 	YAxis,
 	CartesianGrid,
 	Tooltip,
+	Legend,
 	ResponsiveContainer,
 } from "recharts";
 import { scatterChartData } from "../data/sampleData";
@@ -16,34 +17,31 @@ const ScatterChartComponent: React.FC = () => {
 			<h3>Irish Food Prices vs Demand</h3>
 			<p className="chart-subtitle">Price increases vs demand changes (%)</p>
 			<ResponsiveContainer width="100%" height={300}>
-				<ScatterChart
+				<BarChart
+					data={scatterChartData}
 					margin={{
-						top: 20,
-						right: 20,
-						bottom: 20,
-						left: 20,
+						top: 10,
+						right: 30,
+						left: 0,
+						bottom: 0,
 					}}
 				>
-					<CartesianGrid />
-					<XAxis
-						type="number"
+					<CartesianGrid strokeDasharray="3 3" />
+					<XAxis dataKey="category" />
+					<YAxis />
+					<Tooltip />
+					<Legend />
+					<Bar
+						name="Price Increase (%)"
 						dataKey="price_increase"
-						name="Price Increase"
-						unit="%"
+						fill="#DC2626"
 					/>
-					<YAxis
-						type="number"
+					<Bar
+						name="Demand Change (%)"
 						dataKey="demand_change"
-						name="Demand Change"
-						unit="%"
+						fill="#16A34A"
 					/>
-					<Tooltip cursor={{ strokeDasharray: "3 3" }} />
-					<Scatter
-						name="Food Categories"
-						data={scatterChartData}
-						fill="#7C3AED"
-					/>
-				</ScatterChart>
+				</BarChart>
 			</ResponsiveContainer>
 		</div>
 	);

@@ -1,10 +1,11 @@
 import React from "react";
 import {
-	RadarChart,
-	PolarGrid,
-	PolarAngleAxis,
-	PolarRadiusAxis,
-	Radar,
+	BarChart,
+	Bar,
+	XAxis,
+	YAxis,
+	CartesianGrid,
+	Tooltip,
 	ResponsiveContainer,
 	Legend,
 } from "recharts";
@@ -18,33 +19,24 @@ const RadarChartComponent: React.FC = () => {
 				Performance metrics before, during, and after COVID
 			</p>
 			<ResponsiveContainer width="100%" height={300}>
-				<RadarChart cx="50%" cy="50%" outerRadius="80%" data={radarChartData}>
-					<PolarGrid />
-					<PolarAngleAxis dataKey="metric" />
-					<PolarRadiusAxis />
-					<Radar
-						name="Pre-COVID"
-						dataKey="pre_covid"
-						stroke="#059669"
-						fill="#059669"
-						fillOpacity={0.6}
-					/>
-					<Radar
-						name="COVID Impact"
-						dataKey="covid_impact"
-						stroke="#DC2626"
-						fill="#DC2626"
-						fillOpacity={0.6}
-					/>
-					<Radar
-						name="Recovery"
-						dataKey="recovery"
-						stroke="#2563EB"
-						fill="#2563EB"
-						fillOpacity={0.6}
-					/>
+				<BarChart
+					data={radarChartData}
+					margin={{
+						top: 10,
+						right: 30,
+						left: 0,
+						bottom: 0,
+					}}
+				>
+					<CartesianGrid strokeDasharray="3 3" />
+					<XAxis dataKey="metric" />
+					<YAxis />
+					<Tooltip />
 					<Legend />
-				</RadarChart>
+					<Bar name="Pre-COVID" dataKey="pre_covid" fill="#059669" />
+					<Bar name="COVID Impact" dataKey="covid_impact" fill="#DC2626" />
+					<Bar name="Recovery" dataKey="recovery" fill="#2563EB" />
+				</BarChart>
 			</ResponsiveContainer>
 		</div>
 	);
