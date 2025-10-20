@@ -1,0 +1,119 @@
+.App {
+	text-align: center;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+	color: white;
+}
+
+.App-header {
+	padding: 2rem 0;
+	background: rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(10px);
+}
+
+.App-header h1 {
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+	background: linear-gradient(45deg, #fbbf24, #f59e0b);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.App-header p {
+	font-size: 1.2rem;
+	opacity: 0.9;
+	margin: 0;
+}
+
+.dashboard {
+	padding: 2rem;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.charts-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.chart-container {
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 15px;
+	padding: 1.5rem;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-container:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.chart-container h3 {
+	color: #333;
+	margin-bottom: 0.25rem;
+	font-size: 1.4rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.chart-container .chart-subtitle {
+	color: #666;
+	margin: 0 0 1rem 0;
+	font-size: 0.9rem;
+	font-weight: 400;
+	text-align: center;
+	font-style: italic;
+}
+
+.App-footer {
+	padding: 2rem 0;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	margin-top: 2rem;
+}
+
+.App-footer p {
+	margin: 0;
+	opacity: 0.8;
+	font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+	.charts-grid {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.chart-container {
+		padding: 1rem;
+	}
+
+	.App-header h1 {
+		font-size: 2rem;
+	}
+
+	.dashboard {
+		padding: 1rem;
+	}
+}
+
+/* Recharts tooltip styling */
+.recharts-tooltip-wrapper {
+	border-radius: 8px !important;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.recharts-tooltip-label {
+	color: #333 !important;
+	font-weight: 600 !important;
+}
+
+.recharts-tooltip-item {
+	color: #555 !important;
+}
