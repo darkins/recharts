@@ -2,6 +2,38 @@
 
 A modern React TypeScript application visualizing the impact of COVID-19 on Ireland's food industry using data from Irish sources including CSO.ie, ESRI.ie, and Irish Times reporting.
 
+## 📥 Using Real Data from Irish Sources
+
+This project now supports **importing actual data from CSV files**!
+
+### Quick Start with Your Data
+
+1. **Download data from CSO.ie** or other Irish sources
+2. **Fill in the CSV templates** in `public/data/` folder
+3. **Reload the app** - it will automatically use your data
+
+### CSV Templates Available
+
+Located in `public/data/`:
+
+- `line-chart-data.csv` - Restaurant vs supermarket sales
+- `bar-chart-data.csv` - Supermarket category comparison
+- `pie-chart-data.csv` - Food delivery market share
+- `area-chart-data.csv` - Food insecurity trends
+- `scatter-chart-data.csv` - Price vs demand analysis
+- `radar-chart-data.csv` - Supply chain metrics
+
+### Complete Import Guide
+
+📖 See **[CSV-IMPORT-GUIDE.md](./CSV-IMPORT-GUIDE.md)** for detailed instructions on:
+
+- How to access CSO.ie data
+- Which specific tables to download
+- How to format your data correctly
+- Troubleshooting common issues
+
+📖 See **[DATA-IMPORT-SETUP.md](./DATA-IMPORT-SETUP.md)** for system overview
+
 ## 🇮🇪 Irish Data Sources
 
 All data in this dashboard is based on **factual Irish sources**:
