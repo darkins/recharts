@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
 	BarChart,
 	Bar,
@@ -14,7 +15,18 @@ import { areaChartData } from "../data/sampleData";
 const AreaChartComponent: React.FC = () => {
 	return (
 		<div className="chart-container">
-			<h3>Food Insecurity & Support in Ireland</h3>
+			<div
+				style={{
+					display: "flex",
+					justifyContent: "space-between",
+					alignItems: "center",
+				}}
+			>
+				<h3>Food Insecurity & Support in Ireland</h3>
+				<Link to="/data-source/area-chart" className="data-source-link">
+					📊 Data Source
+				</Link>
+			</div>
 			<p className="chart-subtitle">
 				Pandemic Unemployment Payment impact (persons)
 			</p>

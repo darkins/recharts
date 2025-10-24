@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
 	BarChart,
 	Bar,
@@ -14,7 +15,18 @@ import { pieChartData } from "../data/sampleData";
 const PieChartComponent: React.FC = () => {
 	return (
 		<div className="chart-container">
-			<h3>Irish Food Delivery Market Share</h3>
+			<div
+				style={{
+					display: "flex",
+					justifyContent: "space-between",
+					alignItems: "center",
+				}}
+			>
+				<h3>Irish Food Delivery Market Share</h3>
+				<Link to="/data-source/pie-chart" className="data-source-link">
+					📊 Data Source
+				</Link>
+			</div>
 			<p className="chart-subtitle">Platform usage during pandemic (%)</p>
 			<ResponsiveContainer width="100%" height={300}>
 				<BarChart

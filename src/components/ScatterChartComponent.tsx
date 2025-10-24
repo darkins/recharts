@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
 	BarChart,
 	Bar,
@@ -14,7 +15,18 @@ import { scatterChartData } from "../data/sampleData";
 const ScatterChartComponent: React.FC = () => {
 	return (
 		<div className="chart-container">
-			<h3>Irish Food Prices vs Demand</h3>
+			<div
+				style={{
+					display: "flex",
+					justifyContent: "space-between",
+					alignItems: "center",
+				}}
+			>
+				<h3>Irish Food Prices vs Demand</h3>
+				<Link to="/data-source/scatter-chart" className="data-source-link">
+					📊 Data Source
+				</Link>
+			</div>
 			<p className="chart-subtitle">Price increases vs demand changes (%)</p>
 			<ResponsiveContainer width="100%" height={300}>
 				<BarChart

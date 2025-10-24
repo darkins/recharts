@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
 	BarChart,
 	Bar,
@@ -14,7 +15,18 @@ import { radarChartData } from "../data/sampleData";
 const RadarChartComponent: React.FC = () => {
 	return (
 		<div className="chart-container">
-			<h3>Irish Food Supply Chain Resilience</h3>
+			<div
+				style={{
+					display: "flex",
+					justifyContent: "space-between",
+					alignItems: "center",
+				}}
+			>
+				<h3>Irish Food Supply Chain Resilience</h3>
+				<Link to="/data-source/radar-chart" className="data-source-link">
+					📊 Data Source
+				</Link>
+			</div>
 			<p className="chart-subtitle">
 				Performance metrics before, during, and after COVID
 			</p>

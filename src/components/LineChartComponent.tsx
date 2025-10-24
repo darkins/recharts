@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
 	LineChart,
 	Line,
@@ -14,7 +15,18 @@ import { lineChartData } from "../data/sampleData";
 const LineChartComponent: React.FC = () => {
 	return (
 		<div className="chart-container">
-			<h3>Irish Food Sales During COVID-19 (2020)</h3>
+			<div
+				style={{
+					display: "flex",
+					justifyContent: "space-between",
+					alignItems: "center",
+				}}
+			>
+				<h3>Irish Food Sales During COVID-19 (2020)</h3>
+				<Link to="/data-source/line-chart" className="data-source-link">
+					📊 Data Source
+				</Link>
+			</div>
 			<p className="chart-subtitle">
 				Restaurant closures vs grocery surge (€'000s)
 			</p>

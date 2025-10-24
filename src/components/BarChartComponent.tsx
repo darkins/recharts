@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
 	BarChart,
 	Bar,
@@ -14,7 +15,18 @@ import { barChartData } from "../data/sampleData";
 const BarChartComponent: React.FC = () => {
 	return (
 		<div className="chart-container">
-			<h3>Irish Supermarket Sales: Pre-COVID vs Peak</h3>
+			<div
+				style={{
+					display: "flex",
+					justifyContent: "space-between",
+					alignItems: "center",
+				}}
+			>
+				<h3>Irish Supermarket Sales: Pre-COVID vs Peak</h3>
+				<Link to="/data-source/bar-chart" className="data-source-link">
+					📊 Data Source
+				</Link>
+			</div>
 			<p className="chart-subtitle">
 				Category comparison (€'000s) - CSO Retail Index
 			</p>
